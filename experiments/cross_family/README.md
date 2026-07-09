@@ -88,7 +88,7 @@ python experiments/cross_family/run_crossfamily_api.py \
 Smoke first with `--limit 5`. For native Anthropic:
 
 ```bash
-export ANTHROPIC_API_KEY=...
+# Set ANTHROPIC_API_KEY in the environment, then run:
 python experiments/cross_family/run_crossfamily_api.py \
   --provider anthropic \
   --model anthropic/claude-opus-4-8@default \

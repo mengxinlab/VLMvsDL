@@ -10,12 +10,12 @@ prediction JSONL schema consumed by analyze_crossfamily.py.
 
 Examples
 --------
-    export OPENAI_API_KEY=...
+    # Set OPENAI_API_KEY in the environment before running.
     python experiments/cross_family/run_crossfamily_api.py \
         --provider openai --model openai/gpt-5.5-2026-04-23 --model-name openai_gpt-5.5-2026-04-23 \
         --frames-dir frames --clinical-csv data/metadata/clinical_texts.csv
 
-    export ANTHROPIC_API_KEY=...
+    # Set ANTHROPIC_API_KEY in the environment before running.
     python experiments/cross_family/run_crossfamily_api.py \
         --provider anthropic --model anthropic/claude-opus-4-8@default --model-name anthropic_claude-opus-4-8@default \
         --frames-dir frames --clinical-csv data/metadata/clinical_texts.csv

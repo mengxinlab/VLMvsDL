@@ -1,7 +1,0 @@
-Highlights
-
-- Benchmarked Gemini-family VLMs for CT lung-nodule malignancy on LUNA25.
-- Visual-only Gemini showed moderate signal, with AUCs near 0.68-0.71.
-- Clinical text raised Gemini F3 to AUC 0.739, consistent with metadata conditioning.
-- Even metadata-assisted Gemini stayed significantly below 3-D DL (AUC 0.872).
-- LNDb external validation preserved the visual-only VLM-DL performance gap.

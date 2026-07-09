@@ -20,8 +20,9 @@ GitHub repository: https://github.com/mengxinlab/VLMvsDL
 - Cross-family Z0/Z2/Z3 hosted-model audit JSONL outputs and summary CSVs.
 - Per-sample supervised DL prediction CSVs for LUNA25 and LNDb external
   validation.
-- Manuscript LaTeX source, compiled PDFs, bibliography, highlights, and figure
-  files.
+- Manuscript and online-supplement figure files. Journal-specific submission
+  packages, cover letters, title pages, Word files, and editorial
+  correspondence are intentionally excluded.
 
 ## Not redistributed
 
