@@ -1,10 +1,11 @@
-"""Single source of truth for every AUC the manuscript cites.
+"""Single source of truth for the manuscript's core point AUCs.
 
 Conflict (1): AUCs were hand-copied into the text/tables/figures with
 inconsistent rounding (for example, one ablation row appeared as both 0.699 and 0.700). This script
-recomputes every point AUC from the *one* per-sample prediction file that
-backs it and prints it round-half-up to 3 decimals. Text, tables and figure
-annotations must all match this output; nothing is hand-typed.
+recomputes the core ablation, cross-generation, DL, Brock, and LNDb point AUCs
+from the *one* per-sample prediction file that backs each value and prints them
+round-half-up to 3 decimals. Text, tables and figure annotations for these
+analyses must all match this output.
 
 It recomputes only point AUCs (and the few deltas the text cites) from stored
 predictions — no inference is run and reported bootstrap CIs are left as-is

@@ -81,15 +81,16 @@ def margin_label(value: float) -> str:
 
 def write_metadata_provenance(test_meta: pd.DataFrame) -> None:
     rows = [
-        ("Age_at_StudyDate", "Age", "Public demographic field", "Near-objective"),
-        ("Gender", "Sex", "Public demographic field", "Near-objective"),
-        ("cigsmok", "Smoking status", "Public screening-history field", "Self-reported/history-derived"),
-        ("sct_long_dia", "Long-axis diameter", "Public NLST CT-abnormality table", "Reader-derived structured CT measurement"),
-        ("sct_perp_dia", "Perpendicular diameter", "Public NLST CT-abnormality table", "Reader-derived structured CT measurement"),
-        ("sct_epi_loc", "Lobar location", "Public NLST CT-abnormality table", "Reader-derived structured CT descriptor"),
-        ("sct_margins", "Margin category", "Public NLST CT-abnormality table", "Reader-derived structured CT descriptor"),
-        ("sct_pre_att", "Attenuation/density category", "Public NLST CT-abnormality table", "Reader-derived structured CT descriptor"),
-        ("ctdxqual", "CT quality flag", "Public NLST screening-quality table", "Reader/qc-derived scan-quality flag"),
+        ("Age_at_StudyDate", "Age", "Released LUNA25 demographic field", "Near-objective"),
+        ("Gender", "Sex", "Released LUNA25 demographic field", "Near-objective"),
+        ("race", "Race", "Matched NLST participant field", "Self-reported category used verbatim"),
+        ("cigsmok", "Smoking status", "Matched NLST screening-history field", "Self-reported/history-derived"),
+        ("sct_ab_desc", "Nodule type", "Matched NLST CT-abnormality table", "Reader-derived structured nodule descriptor"),
+        ("sct_long_dia", "Long-axis diameter", "Matched NLST CT-abnormality table", "Reader-derived structured CT measurement"),
+        ("sct_perp_dia", "Perpendicular diameter", "Matched NLST CT-abnormality table", "Reader-derived structured CT measurement"),
+        ("sct_epi_loc", "Lobar location", "Matched NLST CT-abnormality table", "Reader-derived structured CT descriptor"),
+        ("sct_margins", "Margin category", "Matched NLST CT-abnormality table", "Reader-derived structured CT descriptor"),
+        ("sct_pre_att", "Attenuation/density category", "Matched NLST CT-abnormality table", "Reader-derived structured CT descriptor"),
         ("label", "Binary malignancy label", "LUNA25 benchmark curation", "Curated mixed reference standard"),
     ]
     out = []

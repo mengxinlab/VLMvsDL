@@ -11,8 +11,8 @@ outputs for:
 > lung nodule malignancy prediction
 
 The current release centers the metadata-reliance audit, including the Gemini
-Z1-Z3/F1-F3 prompt-input ablation, the matched F0 text-only control, and the
-Z0/Z2/Z3 cross-family hosted-model audit.
+Z1-Z3/F1-F3 prompt-input ablation, the matched F0 metadata-only control, and the
+CF-Z0/CF-Z2/CF-Z3 cross-family hosted-model audit.
 
 ## Project Layout
 
@@ -62,8 +62,8 @@ python3.12 -m venv .venv
 - VLM JSONL outputs: `results/vlm/` grouped by experiment
 - Gemini Z1-Z3/F1-F3 prompt-input ablation outputs:
   `results/vlm/luna25_ablation/`
-- F0 text-only metadata-control outputs: `results/vlm/luna25_controls/`
-- Cross-family Z0/Z2/Z3 hosted-model audit outputs:
+- F0 metadata-only control outputs: `results/vlm/luna25_controls/`
+- Cross-family CF-Z0/CF-Z2/CF-Z3 hosted-model audit outputs:
   `results/vlm/crossfamily/`
 - LUNA25 DL per-sample CSVs: `data/predictions/luna25_dl/files/`
 - LNDb DL per-sample CSVs: `data/predictions/lndb_dl/`

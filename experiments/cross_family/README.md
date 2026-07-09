@@ -7,19 +7,19 @@ appears under a portable sparse visual input across model families.
 
 ## Conditions
 
-The public naming follows the manuscript notation:
+The public naming follows the manuscript's cross-family notation:
 
 | condition | runner name | input | role |
 |---|---|---|---|
-| Z2 | `image-only` | rich instruction + 3 sampled CT slices | visual-only sparse-montage baseline |
-| Z3 | `image-text` | rich instruction + 3 sampled CT slices + structured metadata | metadata-assisted sparse-montage condition |
-| Z0 | `text-only` | rich instruction + structured metadata only | metadata-only control |
+| CF-Z2 | `image-only` | rich instruction + 3 sampled CT slices | visual-only sparse-montage baseline |
+| CF-Z3 | `image-text` | rich instruction + 3 sampled CT slices + structured metadata | metadata-assisted sparse-montage condition |
+| CF-Z0 | `text-only` | rich instruction + structured metadata only | metadata-only control |
 
 For each family, the headline readout is:
 
 ```text
-metadata lift = AUC(Z3 image+metadata) - AUC(Z2 image-only)
-text recovery = AUC(Z0 metadata-only)
+metadata lift = AUC(CF-Z3 image+metadata) - AUC(CF-Z2 image-only)
+text recovery = AUC(CF-Z0 metadata-only)
 ```
 
 The sampled slices are frames 9, 29, and 49 from each 64-frame clip, matching
@@ -35,7 +35,7 @@ by `analyze_crossfamily.py`.
 
 Current manuscript rows:
 
-| row | input path | Z2 | Z3 | Z0 |
+| row | input path | CF-Z2 | CF-Z3 | CF-Z0 |
 |---|---|---:|---:|---:|
 | Gemini 3 Flash video reference | native video ablation | 0.682 | 0.730 | n/a |
 | Gemini 3 Flash montage bridge | hosted sparse montage | 0.508 | 0.722 | 0.721 |
@@ -66,8 +66,9 @@ results/vlm/crossfamily/crossfamily_delta_auc.pdf
 
 `run_crossfamily_api.py` is the public, provider-agnostic runner. It uses the
 same prompt, JSON schema, clinical-text lookup, and JSONL output schema as the
-manuscript audit. It supports native Anthropic calls and OpenAI-compatible
-endpoints.
+manuscript audit, and concatenates the three sampled slices into one montage
+before each image-containing request. It supports native Anthropic calls and
+OpenAI-compatible endpoints.
 
 Example:
 
@@ -105,7 +106,9 @@ private data environment, then run the hosted-model panel.
 
 ## Files
 
-- `run_crossfamily_api.py` - hosted-model API runner for Z0/Z2/Z3.
+- `run_crossfamily_api.py` - hosted-model API runner for CF-Z0/CF-Z2/CF-Z3.
+- `run_crossfamily_kbench.py` - single-montage hosted-model runner used for the
+  released cross-family panel.
 - `run_crossfamily_offline.py` - local/offline HF VLM runner using the same
   prompts and output schema.
 - `export_frames.py` - export sampled frames where raw CT crops are available.

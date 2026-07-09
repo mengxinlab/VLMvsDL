@@ -14,10 +14,10 @@ GitHub repository: https://github.com/mengxinlab/VLMvsDL
 - Fixed 20-shot exemplar IDs.
 - Per-sample VLM outputs and model-score CSV/JSONL files used to recompute the
   reported tables.
-- Gemini Z1-Z3/F1-F3 prompt-input ablation outputs, the matched F0 text-only
+- Gemini Z1-Z3/F1-F3 prompt-input ablation outputs, the matched F0 metadata-only
   metadata-control outputs, and summary CSVs used for the metadata-reliance
   audit.
-- Cross-family Z0/Z2/Z3 hosted-model audit JSONL outputs and summary CSVs.
+- Cross-family CF-Z0/CF-Z2/CF-Z3 hosted-model audit JSONL outputs and summary CSVs.
 - Per-sample supervised DL prediction CSVs for LUNA25 and LNDb external
   validation.
 - Manuscript and online-supplement figure files. Journal-specific submission

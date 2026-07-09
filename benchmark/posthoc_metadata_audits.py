@@ -63,8 +63,9 @@ def auc(y, s):
     return roc_auc_score(y, s)
 
 
-def paired_cluster_bootstrap(df, col_a, col_b, cluster_col="pid", n_boot=NB):
+def paired_cluster_bootstrap(df, col_a, col_b, cluster_col="pid", n_boot=NB, rng=None):
     """Return AUC_a, AUC_b, diff, 95% CI of diff, two-sided bootstrap p, per-model cluster CIs."""
+    rng = RNG if rng is None else rng
     y = df["label"].to_numpy()
     a = df[col_a].to_numpy()
     b = df[col_b].to_numpy()
@@ -75,7 +76,7 @@ def paired_cluster_bootstrap(df, col_a, col_b, cluster_col="pid", n_boot=NB):
     aa = np.empty(n_boot)
     bb = np.empty(n_boot)
     for i in range(n_boot):
-        samp = RNG.choice(clusters, size=len(clusters), replace=True)
+        samp = rng.choice(clusters, size=len(clusters), replace=True)
         idx = np.concatenate([idx_by[c] for c in samp])
         yy = y[idx]
         if yy.min() == yy.max():
@@ -240,6 +241,32 @@ def section3_lndb():
     yr = df["label"].to_numpy()
     yf = fin["label"].to_numpy()
     print(f"Finding-level prevalence {yf.mean():.3f}  (row-level {yr.mean():.3f})\n")
+    paired = paired_cluster_bootstrap(
+        df,
+        "efficientnet_b0_score",
+        "gemini_3_flash_preview_20_shot_rich_score",
+        cluster_col="FindingID",
+        rng=np.random.default_rng(20260515),
+    )
+    paired_out = pd.DataFrame([{
+        "comparison": "EfficientNet-B0 minus Gemini F2",
+        "n_rows": paired["n_rows"],
+        "n_findings": paired["n_clusters"],
+        "auc_efficientnet_b0": paired["auc_a"],
+        "auc_gemini_f2": paired["auc_b"],
+        "delta_auc": paired["diff"],
+        "delta_cluster_ci_lo": paired["diff_ci"][0],
+        "delta_cluster_ci_hi": paired["diff_ci"][1],
+        "bootstrap_p": paired["boot_p"],
+    }])
+    paired_path = VLM / "lndb_paired_finding_cluster_comparison.csv"
+    paired_out.to_csv(paired_path, index=False)
+    print(
+        "EfficientNet-B0 - Gemini F2: "
+        f"delta={paired['diff']:.4f}, paired finding-cluster 95% CI "
+        f"[{paired['diff_ci'][0]:.3f}, {paired['diff_ci'][1]:.3f}]"
+    )
+    print(f"Wrote {paired_path}\n")
     print(f"{'model':<34}{'row AUC':>9}{'find AUC':>10}   finding 95% CI (cluster by FindingID)")
     for c in score_cols:
         ra = auc(yr, df[c].to_numpy())

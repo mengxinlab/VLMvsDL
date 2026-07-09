@@ -1,4 +1,4 @@
-"""Hosted-model API runner for the cross-family Z0/Z2/Z3 metadata triad.
+"""Hosted-model API runner for the cross-family CF-Z0/CF-Z2/CF-Z3 metadata triad.
 
 Runs on any machine with internet and the exported frame PNGs (see
 export_frames.py). It does not need the raw CT data once the sparse frame bundle
@@ -25,6 +25,7 @@ from __future__ import annotations
 import argparse
 import base64
 import importlib.util
+import io
 import json
 import os
 import random
@@ -33,6 +34,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import pandas as pd
+from PIL import Image
 
 _spec = importlib.util.spec_from_file_location(
     "rcf", str(Path(__file__).resolve().parent / "run_crossfamily_offline.py")
@@ -50,12 +52,25 @@ _BASE_URL: str | None = None
 _API_KEY: str | None = None
 
 
-def b64_png(path: Path) -> str:
-    return base64.b64encode(path.read_bytes()).decode("ascii")
-
-
 def frame_paths(frames_dir: Path, aid: str, n: int) -> list[Path]:
     return [frames_dir / aid / f"{j}.png" for j in range(n)]
+
+
+def montage_b64(paths: list[Path]) -> str:
+    images = []
+    for path in paths:
+        with Image.open(path) as image:
+            images.append(image.convert("RGB"))
+    height = max(image.height for image in images)
+    width = sum(image.width for image in images) + 4 * (len(images) - 1)
+    canvas = Image.new("RGB", (width, height), (0, 0, 0))
+    x = 0
+    for image in images:
+        canvas.paste(image, (x, 0))
+        x += image.width + 4
+    buffer = io.BytesIO()
+    canvas.save(buffer, format="PNG")
+    return base64.b64encode(buffer.getvalue()).decode("ascii")
 
 
 def user_text(condition: str, clinical_text: str) -> str:
@@ -72,9 +87,8 @@ def call_openai(model, condition, frames, clinical_text):
     client = OpenAI(base_url=_BASE_URL or None, api_key=_API_KEY)
     content = []
     if condition != "text-only":
-        for fp in frames:
-            content.append({"type": "image_url",
-                            "image_url": {"url": f"data:image/png;base64,{b64_png(fp)}"}})
+        content.append({"type": "image_url",
+                        "image_url": {"url": f"data:image/png;base64,{montage_b64(frames)}"}})
     content.append({"type": "text", "text": user_text(condition, clinical_text)})
     resp = client.chat.completions.create(
         model=model,
@@ -92,9 +106,8 @@ def call_anthropic(model, condition, frames, clinical_text):
     client = anthropic.Anthropic(api_key=_API_KEY)
     content = []
     if condition != "text-only":
-        for fp in frames:
-            content.append({"type": "image", "source": {
-                "type": "base64", "media_type": "image/png", "data": b64_png(fp)}})
+        content.append({"type": "image", "source": {
+            "type": "base64", "media_type": "image/png", "data": montage_b64(frames)}})
     content.append({"type": "text", "text": user_text(condition, clinical_text)})
     resp = client.messages.create(
         model=model,

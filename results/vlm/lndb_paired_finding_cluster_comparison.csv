@@ -1,0 +1,2 @@
+comparison,n_rows,n_findings,auc_efficientnet_b0,auc_gemini_f2,delta_auc,delta_cluster_ci_lo,delta_cluster_ci_hi,bootstrap_p
+EfficientNet-B0 minus Gemini F2,814,439,0.8152757487216946,0.654035792549306,0.16123995617238862,0.08614775338349587,0.2347273939459353,0.0
