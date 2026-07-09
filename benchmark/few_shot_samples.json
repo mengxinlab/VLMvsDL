@@ -1,0 +1,240 @@
+{
+  "seed": 42,
+  "all_20": [
+    {
+      "AnnotationID": "120570_1_20010102",
+      "label": 1,
+      "PatientID": 120570
+    },
+    {
+      "AnnotationID": "218499_1_19990102",
+      "label": 1,
+      "PatientID": 218499
+    },
+    {
+      "AnnotationID": "104839_1_19990102",
+      "label": 1,
+      "PatientID": 104839
+    },
+    {
+      "AnnotationID": "215325_1_20010102",
+      "label": 1,
+      "PatientID": 215325
+    },
+    {
+      "AnnotationID": "213972_1_19990102",
+      "label": 1,
+      "PatientID": 213972
+    },
+    {
+      "AnnotationID": "213972_1_20010102",
+      "label": 1,
+      "PatientID": 213972
+    },
+    {
+      "AnnotationID": "202268_1_20010102",
+      "label": 1,
+      "PatientID": 202268
+    },
+    {
+      "AnnotationID": "115684_1_20010102",
+      "label": 1,
+      "PatientID": 115684
+    },
+    {
+      "AnnotationID": "211570_2_20010102",
+      "label": 1,
+      "PatientID": 211570
+    },
+    {
+      "AnnotationID": "208446_1_19990102",
+      "label": 1,
+      "PatientID": 208446
+    },
+    {
+      "AnnotationID": "111953_1_20010102",
+      "label": 0,
+      "PatientID": 111953
+    },
+    {
+      "AnnotationID": "217089_2_20000102",
+      "label": 0,
+      "PatientID": 217089
+    },
+    {
+      "AnnotationID": "115001_1_19990102",
+      "label": 0,
+      "PatientID": 115001
+    },
+    {
+      "AnnotationID": "130692_4_20000102",
+      "label": 0,
+      "PatientID": 130692
+    },
+    {
+      "AnnotationID": "130589_2_20000102",
+      "label": 0,
+      "PatientID": 130589
+    },
+    {
+      "AnnotationID": "103414_4_20000102",
+      "label": 0,
+      "PatientID": 103414
+    },
+    {
+      "AnnotationID": "213897_2_20000102",
+      "label": 0,
+      "PatientID": 213897
+    },
+    {
+      "AnnotationID": "119347_2_19990102",
+      "label": 0,
+      "PatientID": 119347
+    },
+    {
+      "AnnotationID": "207451_1_19990102",
+      "label": 0,
+      "PatientID": 207451
+    },
+    {
+      "AnnotationID": "114159_3_19990102",
+      "label": 0,
+      "PatientID": 114159
+    }
+  ],
+  "malignant_10": [
+    {
+      "AnnotationID": "120570_1_20010102",
+      "label": 1,
+      "PatientID": 120570
+    },
+    {
+      "AnnotationID": "218499_1_19990102",
+      "label": 1,
+      "PatientID": 218499
+    },
+    {
+      "AnnotationID": "104839_1_19990102",
+      "label": 1,
+      "PatientID": 104839
+    },
+    {
+      "AnnotationID": "215325_1_20010102",
+      "label": 1,
+      "PatientID": 215325
+    },
+    {
+      "AnnotationID": "213972_1_19990102",
+      "label": 1,
+      "PatientID": 213972
+    },
+    {
+      "AnnotationID": "213972_1_20010102",
+      "label": 1,
+      "PatientID": 213972
+    },
+    {
+      "AnnotationID": "202268_1_20010102",
+      "label": 1,
+      "PatientID": 202268
+    },
+    {
+      "AnnotationID": "115684_1_20010102",
+      "label": 1,
+      "PatientID": 115684
+    },
+    {
+      "AnnotationID": "211570_2_20010102",
+      "label": 1,
+      "PatientID": 211570
+    },
+    {
+      "AnnotationID": "208446_1_19990102",
+      "label": 1,
+      "PatientID": 208446
+    }
+  ],
+  "benign_10": [
+    {
+      "AnnotationID": "111953_1_20010102",
+      "label": 0,
+      "PatientID": 111953
+    },
+    {
+      "AnnotationID": "217089_2_20000102",
+      "label": 0,
+      "PatientID": 217089
+    },
+    {
+      "AnnotationID": "115001_1_19990102",
+      "label": 0,
+      "PatientID": 115001
+    },
+    {
+      "AnnotationID": "130692_4_20000102",
+      "label": 0,
+      "PatientID": 130692
+    },
+    {
+      "AnnotationID": "130589_2_20000102",
+      "label": 0,
+      "PatientID": 130589
+    },
+    {
+      "AnnotationID": "103414_4_20000102",
+      "label": 0,
+      "PatientID": 103414
+    },
+    {
+      "AnnotationID": "213897_2_20000102",
+      "label": 0,
+      "PatientID": 213897
+    },
+    {
+      "AnnotationID": "119347_2_19990102",
+      "label": 0,
+      "PatientID": 119347
+    },
+    {
+      "AnnotationID": "207451_1_19990102",
+      "label": 0,
+      "PatientID": 207451
+    },
+    {
+      "AnnotationID": "114159_3_19990102",
+      "label": 0,
+      "PatientID": 114159
+    }
+  ],
+  "five_shot": {
+    "malignant_3": [
+      {
+        "AnnotationID": "120570_1_20010102",
+        "label": 1,
+        "PatientID": 120570
+      },
+      {
+        "AnnotationID": "218499_1_19990102",
+        "label": 1,
+        "PatientID": 218499
+      },
+      {
+        "AnnotationID": "104839_1_19990102",
+        "label": 1,
+        "PatientID": 104839
+      }
+    ],
+    "benign_2": [
+      {
+        "AnnotationID": "111953_1_20010102",
+        "label": 0,
+        "PatientID": 111953
+      },
+      {
+        "AnnotationID": "217089_2_20000102",
+        "label": 0,
+        "PatientID": 217089
+      }
+    ]
+  }
+}

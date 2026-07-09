@@ -1,0 +1,3 @@
+cohort,annotations,patients,malignant_n,malignant_pct,age_mean,age_sd,male_n,male_pct,current_smoker_n,current_smoker_pct,long_dia_avail_n,long_dia_avail_pct,margin_avail_n,margin_avail_pct,att_avail_n,att_avail_pct
+Full LUNA25 test split,917,318,81,8.8,63.3,5.3,562,61.3,461,50.3,701,76.4,706,77.0,706,77.0
+Brock-computable subset,701,270,55,7.8,63.3,5.3,437,62.3,330,47.1,701,100.0,701,100.0,701,100.0

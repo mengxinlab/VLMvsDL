@@ -1,0 +1,4 @@
+streamlit==1.51.0
+openai>=1.110.0
+google-auth>=2.40.0
+pandas>=2.2.0

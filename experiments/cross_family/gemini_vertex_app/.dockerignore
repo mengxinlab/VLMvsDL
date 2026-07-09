@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+outputs/
+*.log
+*.tar.gz
+*.zip

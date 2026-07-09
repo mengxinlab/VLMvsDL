@@ -1,0 +1,12 @@
+run,n,auc,ci_lo,ci_hi
+Z1 zero-shot minimal,917,0.7024,0.6388,0.7618
+Z2 zero-shot rich,917,0.6823,0.6146,0.7455
+Z3 zero-shot rich+clinical,917,0.7296,0.6665,0.7899
+F1 20-shot minimal,917,0.7118,0.6561,0.7704
+F2 20-shot rich,917,0.6995,0.6415,0.7551
+F3 20-shot rich+clinical,917,0.7394,0.6801,0.7938
+Gemini 2.5 Flash,917,0.6818,0.6176,0.7386
+Gemini 2.5 Pro,917,0.7101,0.6529,0.7703
+Gemini 3 Flash Preview,917,0.7394,0.6824,0.7945
+Gemini 3.1 Pro Preview,917,0.7358,0.671,0.7968
+MedGemma 1.5-4B,917,0.594,0.5559,0.6294

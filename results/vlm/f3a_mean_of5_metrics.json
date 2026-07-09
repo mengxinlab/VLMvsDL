@@ -1,0 +1,96 @@
+{
+  "n_runs": 5,
+  "n_cases": 917,
+  "individual_run_aucs": [
+    0.7394,
+    0.7428,
+    0.7436,
+    0.7352,
+    0.7364
+  ],
+  "five_run_mean_auc": 0.7395,
+  "five_run_sd_auc": 0.0037,
+  "run_averaged_auc": 0.747,
+  "run_averaged_auc_ci": [
+    0.685,
+    0.8019
+  ],
+  "run_averaged_prauc": 0.3105,
+  "run_averaged_prauc_ci": [
+    0.2297,
+    0.4006
+  ],
+  "sens_at_0p5": 0.728,
+  "spec_at_0p5": 0.701,
+  "youden_threshold": 0.54,
+  "sens_at_youden": 0.728,
+  "spec_at_youden": 0.708,
+  "brier": 0.2145,
+  "ece": 0.2709,
+  "mce": 0.6695,
+  "net_benefit": {
+    "0.05": 0.0403,
+    "0.1": 0.0065,
+    "0.15": -0.0008,
+    "0.2": -0.0224,
+    "0.5": -0.2083
+  },
+  "delong_vs_dl": {
+    "STU-Net": {
+      "auc_dl": 0.8722,
+      "auc_vlm_on_intersection": 0.747,
+      "n": 917,
+      "delong_p": 6.029e-05
+    },
+    "EfficientNet-B0": {
+      "auc_dl": 0.8632,
+      "auc_vlm_on_intersection": 0.747,
+      "n": 917,
+      "delong_p": 0.0002453
+    },
+    "ResNet-18": {
+      "auc_dl": 0.8564,
+      "auc_vlm_on_intersection": 0.747,
+      "n": 917,
+      "delong_p": 0.001106
+    },
+    "DenseNet-121": {
+      "auc_dl": 0.8327,
+      "auc_vlm_on_intersection": 0.747,
+      "n": 917,
+      "delong_p": 0.01886
+    },
+    "ResNet-50": {
+      "auc_dl": 0.8167,
+      "auc_vlm_on_intersection": 0.747,
+      "n": 917,
+      "delong_p": 0.05221
+    },
+    "Swin-UNETR": {
+      "auc_dl": 0.7999,
+      "auc_vlm_on_intersection": 0.747,
+      "n": 917,
+      "delong_p": 0.152
+    },
+    "ViT-Base": {
+      "auc_dl": 0.6933,
+      "auc_vlm_on_intersection": 0.747,
+      "n": 917,
+      "delong_p": 0.2147
+    }
+  },
+  "brock_subset": {
+    "n": 701,
+    "auc_vlm": 0.7588,
+    "auc_vlm_ci": [
+      0.6867,
+      0.8339
+    ],
+    "auc_brock": 0.7737,
+    "auc_brock_ci": [
+      0.7001,
+      0.8361
+    ],
+    "delong_p": 0.4951
+  }
+}

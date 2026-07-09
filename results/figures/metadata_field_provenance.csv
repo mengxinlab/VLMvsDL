@@ -1,0 +1,11 @@
+field,display,source,kind,available_n,available_pct
+Age_at_StudyDate,Age,Public demographic field,Near-objective,917,100.0
+Gender,Sex,Public demographic field,Near-objective,917,100.0
+cigsmok,Smoking status,Public screening-history field,Self-reported/history-derived,917,100.0
+sct_long_dia,Long-axis diameter,Public NLST CT-abnormality table,Reader-derived structured CT measurement,701,76.4
+sct_perp_dia,Perpendicular diameter,Public NLST CT-abnormality table,Reader-derived structured CT measurement,701,76.4
+sct_epi_loc,Lobar location,Public NLST CT-abnormality table,Reader-derived structured CT descriptor,706,77.0
+sct_margins,Margin category,Public NLST CT-abnormality table,Reader-derived structured CT descriptor,706,77.0
+sct_pre_att,Attenuation/density category,Public NLST CT-abnormality table,Reader-derived structured CT descriptor,706,77.0
+ctdxqual,CT quality flag,Public NLST screening-quality table,Reader/qc-derived scan-quality flag,917,100.0
+label,Binary malignancy label,LUNA25 benchmark curation,Curated mixed reference standard,917,100.0

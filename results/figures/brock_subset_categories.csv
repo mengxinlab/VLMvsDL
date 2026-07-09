@@ -1,0 +1,25 @@
+cohort,family,category,n
+Full LUNA25 test split,Density,Solid,560
+Full LUNA25 test split,Density,Missing,211
+Full LUNA25 test split,Density,Part-solid,60
+Full LUNA25 test split,Density,GGN,57
+Full LUNA25 test split,Density,Not determined,18
+Full LUNA25 test split,Density,Fluid/water,8
+Full LUNA25 test split,Density,Fat,2
+Full LUNA25 test split,Density,Mixed/other,1
+Full LUNA25 test split,Margin,Lobulated,415
+Full LUNA25 test split,Margin,Missing,211
+Full LUNA25 test split,Margin,Spiculated/irregular,166
+Full LUNA25 test split,Margin,Smooth,100
+Full LUNA25 test split,Margin,Not determined,25
+Brock-computable subset,Density,Solid,558
+Brock-computable subset,Density,Part-solid,60
+Brock-computable subset,Density,GGN,56
+Brock-computable subset,Density,Not determined,16
+Brock-computable subset,Density,Fluid/water,8
+Brock-computable subset,Density,Fat,2
+Brock-computable subset,Density,Mixed/other,1
+Brock-computable subset,Margin,Lobulated,414
+Brock-computable subset,Margin,Spiculated/irregular,163
+Brock-computable subset,Margin,Smooth,99
+Brock-computable subset,Margin,Not determined,25

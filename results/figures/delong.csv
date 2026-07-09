@@ -1,0 +1,56 @@
+a,b,n,auc_a,auc_b,delta,p
+Z1 zero-shot minimal,Z2 zero-shot rich,917,0.7024,0.6823,0.0201,0.5707
+Z1 zero-shot minimal,Z3 zero-shot rich+clinical,917,0.7024,0.7296,-0.0272,0.514
+Z1 zero-shot minimal,F1 20-shot minimal,917,0.7024,0.7118,-0.0094,0.8002
+Z1 zero-shot minimal,F2 20-shot rich,917,0.7024,0.6995,0.0029,0.9384
+Z1 zero-shot minimal,F3 20-shot rich+clinical,917,0.7024,0.7394,-0.0371,0.3829
+Z1 zero-shot minimal,Gemini 2.5 Flash,917,0.7024,0.6818,0.0205,0.6495
+Z1 zero-shot minimal,Gemini 2.5 Pro,917,0.7024,0.7101,-0.0077,0.8556
+Z1 zero-shot minimal,Gemini 3 Flash Preview,917,0.7024,0.7394,-0.0371,0.3829
+Z1 zero-shot minimal,Gemini 3.1 Pro Preview,917,0.7024,0.7358,-0.0334,0.4138
+Z1 zero-shot minimal,MedGemma 1.5-4B,917,0.7024,0.594,0.1084,0.004123
+Z2 zero-shot rich,Z3 zero-shot rich+clinical,917,0.6823,0.7296,-0.0473,0.2302
+Z2 zero-shot rich,F1 20-shot minimal,917,0.6823,0.7118,-0.0295,0.4542
+Z2 zero-shot rich,F2 20-shot rich,917,0.6823,0.6995,-0.0172,0.6608
+Z2 zero-shot rich,F3 20-shot rich+clinical,917,0.6823,0.7394,-0.0572,0.1749
+Z2 zero-shot rich,Gemini 2.5 Flash,917,0.6823,0.6818,0.0005,0.9914
+Z2 zero-shot rich,Gemini 2.5 Pro,917,0.6823,0.7101,-0.0278,0.5046
+Z2 zero-shot rich,Gemini 3 Flash Preview,917,0.6823,0.7394,-0.0572,0.1749
+Z2 zero-shot rich,Gemini 3.1 Pro Preview,917,0.6823,0.7358,-0.0535,0.1919
+Z2 zero-shot rich,MedGemma 1.5-4B,917,0.6823,0.594,0.0883,0.0268
+Z3 zero-shot rich+clinical,F1 20-shot minimal,917,0.7296,0.7118,0.0178,0.6236
+Z3 zero-shot rich+clinical,F2 20-shot rich,917,0.7296,0.6995,0.0301,0.4837
+Z3 zero-shot rich+clinical,F3 20-shot rich+clinical,917,0.7296,0.7394,-0.0098,0.6877
+Z3 zero-shot rich+clinical,Gemini 2.5 Flash,917,0.7296,0.6818,0.0478,0.0465
+Z3 zero-shot rich+clinical,Gemini 2.5 Pro,917,0.7296,0.7101,0.0195,0.4245
+Z3 zero-shot rich+clinical,Gemini 3 Flash Preview,917,0.7296,0.7394,-0.0098,0.6877
+Z3 zero-shot rich+clinical,Gemini 3.1 Pro Preview,917,0.7296,0.7358,-0.0062,0.7801
+Z3 zero-shot rich+clinical,MedGemma 1.5-4B,917,0.7296,0.594,0.1356,1.537e-06
+F1 20-shot minimal,F2 20-shot rich,917,0.7118,0.6995,0.0123,0.7113
+F1 20-shot minimal,F3 20-shot rich+clinical,917,0.7118,0.7394,-0.0276,0.4603
+F1 20-shot minimal,Gemini 2.5 Flash,917,0.7118,0.6818,0.03,0.4689
+F1 20-shot minimal,Gemini 2.5 Pro,917,0.7118,0.7101,0.0017,0.9643
+F1 20-shot minimal,Gemini 3 Flash Preview,917,0.7118,0.7394,-0.0276,0.4603
+F1 20-shot minimal,Gemini 3.1 Pro Preview,917,0.7118,0.7358,-0.024,0.5375
+F1 20-shot minimal,MedGemma 1.5-4B,917,0.7118,0.594,0.1178,0.0003104
+F2 20-shot rich,F3 20-shot rich+clinical,917,0.6995,0.7394,-0.04,0.3407
+F2 20-shot rich,Gemini 2.5 Flash,917,0.6995,0.6818,0.0177,0.6884
+F2 20-shot rich,Gemini 2.5 Pro,917,0.6995,0.7101,-0.0106,0.7855
+F2 20-shot rich,Gemini 3 Flash Preview,917,0.6995,0.7394,-0.04,0.3407
+F2 20-shot rich,Gemini 3.1 Pro Preview,917,0.6995,0.7358,-0.0363,0.3735
+F2 20-shot rich,MedGemma 1.5-4B,917,0.6995,0.594,0.1055,0.00514
+F3 20-shot rich+clinical,Gemini 2.5 Flash,917,0.7394,0.6818,0.0576,0.01882
+F3 20-shot rich+clinical,Gemini 2.5 Pro,917,0.7394,0.7101,0.0294,0.1487
+F3 20-shot rich+clinical,Gemini 3 Flash Preview,917,0.7394,0.7394,0.0,1
+F3 20-shot rich+clinical,Gemini 3.1 Pro Preview,917,0.7394,0.7358,0.0036,0.8836
+F3 20-shot rich+clinical,MedGemma 1.5-4B,917,0.7394,0.594,0.1455,8.31e-07
+Gemini 2.5 Flash,Gemini 2.5 Pro,917,0.6818,0.7101,-0.0282,0.1619
+Gemini 2.5 Flash,Gemini 3 Flash Preview,917,0.6818,0.7394,-0.0576,0.01882
+Gemini 2.5 Flash,Gemini 3.1 Pro Preview,917,0.6818,0.7358,-0.054,0.01804
+Gemini 2.5 Flash,MedGemma 1.5-4B,917,0.6818,0.594,0.0878,0.002572
+Gemini 2.5 Pro,Gemini 3 Flash Preview,917,0.7101,0.7394,-0.0294,0.1487
+Gemini 2.5 Pro,Gemini 3.1 Pro Preview,917,0.7101,0.7358,-0.0257,0.2234
+Gemini 2.5 Pro,MedGemma 1.5-4B,917,0.7101,0.594,0.1161,0.0001102
+Gemini 3 Flash Preview,Gemini 3.1 Pro Preview,917,0.7394,0.7358,0.0036,0.8836
+Gemini 3 Flash Preview,MedGemma 1.5-4B,917,0.7394,0.594,0.1455,8.31e-07
+Gemini 3.1 Pro Preview,MedGemma 1.5-4B,917,0.7358,0.594,0.1418,1.266e-06

@@ -1,0 +1,15 @@
+file,model,split,rows,auc,has_logit
+densenet121_baseline_test_preds.csv,densenet121_baseline,test,917,0.8326540256364818,True
+efficientnet_b0_baseline_test_preds.csv,efficientnet_b0_baseline,test,917,0.863237639553429,True
+resnet18_baseline_test_preds.csv,resnet18_baseline,test,917,0.856415027467659,True
+resnet50_baseline_test_preds.csv,resnet50_baseline,test,917,0.816675527201843,True
+stunet_base_warmup_test_preds.csv,stunet_base_warmup,test,917,0.8721572449642625,True
+swin_unetr_final_gpu_test_preds.csv,swin_unetr_final_gpu,test,917,0.7999143481599622,True
+vit_baseline_test_preds.csv,vit_baseline,test,917,0.693277807312895,True
+densenet121_baseline_val_preds.csv,densenet121_baseline,val,922,0.8557155581947743,True
+efficientnet_b0_baseline_val_preds.csv,efficientnet_b0_baseline,val,922,0.8550326603325415,True
+resnet18_baseline_val_preds.csv,resnet18_baseline,val,922,0.8531027315914489,True
+resnet50_baseline_val_preds.csv,resnet50_baseline,val,922,0.8314875296912114,True
+stunet_base_warmup_val_preds.csv,stunet_base_warmup,val,922,0.8783402612826604,True
+swin_unetr_final_gpu_val_preds.csv,swin_unetr_final_gpu,val,922,0.8007571258907363,True
+vit_baseline_val_preds.csv,vit_baseline,val,922,0.7067250593824228,True

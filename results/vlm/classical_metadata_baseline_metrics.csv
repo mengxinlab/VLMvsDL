@@ -1,0 +1,5 @@
+model,structured_inputs,auc,ci_lo,ci_hi,pr_auc
+logistic_regression,no_race,0.6607,0.591,0.728,0.244
+gradient_boosting,no_race,0.7097,0.650,0.766,0.203
+logistic_regression,with_race,0.6598,0.591,0.728,0.241
+gradient_boosting,with_race,0.7132,0.651,0.772,0.207

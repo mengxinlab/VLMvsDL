@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this code or the released predictions, please cite the associated manuscript and this repository."
+title: "VLMvsDL: metadata-reliance audit for vision-language models in CT lung nodule malignancy prediction"
+version: "1.0.0"
+date-released: "2026-06-05"
+license: "Apache-2.0"
+repository-code: "https://github.com/mengxinlab/VLMvsDL"
+authors:
+  - family-names: "Meng"
+    given-names: "Xin"
+  - family-names: "Li"
+    given-names: "Xiaopeng"
+  - family-names: "Yu"
+    given-names: "Huixin"
+  - family-names: "Zhao"
+    given-names: "Yuhong"
+  - family-names: "Chang"
+    given-names: "Qing"
+preferred-citation:
+  type: article
+  title: "Auditing metadata reliance in general-purpose vision-language models for CT lung nodule malignancy prediction"
+  authors:
+    - family-names: "Meng"
+      given-names: "Xin"
+    - family-names: "Li"
+      given-names: "Xiaopeng"
+    - family-names: "Yu"
+      given-names: "Huixin"
+    - family-names: "Zhao"
+      given-names: "Yuhong"
+    - family-names: "Chang"
+      given-names: "Qing"
+  year: 2026

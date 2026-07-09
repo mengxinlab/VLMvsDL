@@ -1,0 +1,14 @@
+accelerate
+google-genai
+matplotlib
+monai
+numpy
+opencv-python
+pandas
+pillow
+scikit-learn
+scipy
+tabulate
+torch
+tqdm
+transformers
